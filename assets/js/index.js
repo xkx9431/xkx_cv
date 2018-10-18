@@ -1,1 +1,1 @@
-console.log("感谢您的浏览，期待能够加入贵公司！我的博客：http://if2er.com/");
+console.log("感谢您的浏览，期待能够加入贵公司！个人邮箱：2776479680@qq.com,CSDN博客：https://blog.csdn.net/qq_30682027");
