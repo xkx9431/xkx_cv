@@ -50,13 +50,11 @@
                         return !(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM);
                     }
                     function switchFixed(){
-                        var sideDom = document.getElementById('side');
-                        alert(isPC());
-                        if(isPC()){
-                            sideDom.style.position = sideDom.style.position === 'fixed' ? 'absolute' : 'fixed';
-                        }else{
-                            sideDom.style.position = 'absolute';
-                        }
+                        sideDom.style.position = sideDom.style.position === 'fixed' ? 'absolute' : 'fixed';
+                    }
+                    var sideDom = document.getElementById('side');
+                    if(!isPC()){
+                        sideDom.style.position = 'fixed';
                     }
                 </script>
                 <input id="cb" type="checkbox">
