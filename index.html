@@ -34,27 +34,13 @@
 
     <article class="container">
         <section class="side" id="side" style="position: absolute">
+
             <!-- 左栏固定开关，记得及时删除这段代码 Start-->
             <label title="点击固定左侧栏" class="switch" style="display: none;" onchange="switchFixed()">
                 <script type="text/javaScript">
-                    function isPC() {
-                        var sUserAgent = navigator.userAgent.toLowerCase();
-                        var bIsIpad = sUserAgent.match(/ipad/i) === "ipad";
-                        var bIsIphoneOs = sUserAgent.match(/iphone os/i) === "iphone os";
-                        var bIsMidp = sUserAgent.match(/midp/i) === "midp";
-                        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) === "rv:1.2.3.4";
-                        var bIsUc = sUserAgent.match(/ucweb/i) === "ucweb";
-                        var bIsAndroid = sUserAgent.match(/android/i) === "android";
-                        var bIsCE = sUserAgent.match(/windows ce/i) === "windows ce";
-                        var bIsWM = sUserAgent.match(/windows mobile/i) === "windows mobile";
-                        return !(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM);
-                    }
                     function switchFixed(){
-                        sideDom.style.position = sideDom.style.position === 'fixed' ? 'absolute' : 'fixed';
-                    }
-                    var sideDom = document.getElementById('side');
-                    if(!isPC()){
-                        sideDom.style.position = 'fixed';
+                        var value = document.getElementById('side').style.position === 'fixed' ? 'absolute' : 'fixed';
+                        document.getElementById('side').style.position = value;
                     }
                 </script>
                 <input id="cb" type="checkbox">
