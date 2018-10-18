@@ -33,14 +33,12 @@
     <header class="header"></header>
 
     <article class="container">
-        <section class="side" id="side" style="position: absolute">
-
+        <section class="side" id="side">
             <!-- 左栏固定开关，记得及时删除这段代码 Start-->
             <label title="点击固定左侧栏" class="switch" style="display: none;" onchange="switchFixed()">
                 <script type="text/javaScript">
                     function switchFixed(){
-                        var value = document.getElementById('side').style.position === 'fixed' ? 'absolute' : 'fixed';
-                        document.getElementById('side').style.position = value;
+                        document.getElementById('side').style.position = document.getElementById('side').style.position === 'fixed' ? 'absolute' : 'fixed';
                     }
                 </script>
                 <input id="cb" type="checkbox">
