@@ -49,7 +49,6 @@
                         var bIsWM = sUserAgent.match(/windows mobile/i) === "windows mobile";
                         return !(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM);
                     }
-                    browserRedirect();
                     function switchFixed(){
                         var sideDom = document.getElementById('side');
                         alert(isPC());
